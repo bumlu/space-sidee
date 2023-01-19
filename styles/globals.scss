@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "MazzardH";
+  src: url("/fonts/MazzardH-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MazzardH";
+  src: url("/fonts/MazzardH-Medium.woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MazzardH";
+  src: url("/font/MazzardH-Regular.woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Move-X";
+  src: url("/fonts/Move-X-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NeueMachina";
+  src: url("/font/NeueMachina-Bold.woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NeueMachina";
+  src: url("/fonts/NeueMachina-Medium.woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NeueMachina";
+  src: url("/fonts/NeueMachina-Regular.woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TTOctosquares";
+  src: url("/fonts/TTOctosquares-Medium.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TTOctosquares";
+  src: url("/TTOctosquares-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+html,
+body {
+  background: green;
+  font-size: 15px;
+  line-height: 1.4;
+  font-family: "TTOctosquares";
+}
