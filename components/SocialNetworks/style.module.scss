@@ -1,6 +1,7 @@
 .socialNetworks {
   display: flex;
-  gap: 2.4rem;
+  gap: 3vw;
+  transition: all 0.3s;
 
   &Item {
   }
@@ -14,9 +15,12 @@
     background-position: center center;
     background-size: 100% auto;
 
-    :hover,
-    :visited {
+    &:hover,
+    &:visited {
       color: white;
+    }
+    &:hover {
+      opacity: 0.8;
     }
   }
   &Discord {

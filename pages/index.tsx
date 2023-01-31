@@ -15,7 +15,7 @@ export default function Home() {
           <SocialNetworks />
           <Button onClick={() => {}}>Whitepaper</Button>
         </header>
-        {/* <Navigation /> */}
+        <Navigation />
         <div>
           <Title>From dust to&nbsp;dawn</Title>
           <ul className={styles.buttonList}>

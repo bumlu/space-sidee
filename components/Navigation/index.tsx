@@ -1,5 +1,7 @@
 import Link from "next/link";
+import cl from "classnames";
 import styles from "./style.module.scss";
+import { Fragment } from "react";
 
 interface NavigationProps {}
 
@@ -8,30 +10,38 @@ const links = [
     id: 1,
     title: "Home",
     href: "/",
+    active: true,
   },
   {
     id: 2,
     title: "Factions",
     href: "/",
+    active: false,
   },
   {
     id: 3,
     title: "Roadmap",
     href: "/",
+    active: false,
   },
 ];
 export const Navigation: React.FC<NavigationProps> = () => {
   return (
     <nav className={styles.navigation}>
-      <ul className={styles.navigationList}>
-        {links.map((link) => (
-          <li key={link.id} className={styles.navigationItem}>
-            <Link href={link.href} className={styles.navigationLink}>
-              {link.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {links.map((link, id) => (
+        <Fragment key={link.id}>
+          <Link
+            href={link.href}
+            className={cl(
+              styles.navigationLink,
+              link.active && styles.navigationLinkActive
+            )}
+          >
+            {link.title}
+          </Link>
+          {id < links.length - 1 && <span className={styles.navigationStar} />}
+        </Fragment>
+      ))}
     </nav>
   );
 };
