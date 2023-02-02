@@ -1,41 +1,24 @@
 import Link from "next/link";
-import { Children, ReactNode } from "react";
+import { ReactNode } from "react";
+import cl from "classnames";
 import styles from "./style.module.scss";
 
 interface ButtonProps {
   onClick: () => void;
   children: ReactNode;
+  className: string;
 }
 
-export const Button: React.FC<ButtonProps> = ({ onClick, children }) => {
+export const Button: React.FC<ButtonProps> = ({
+  onClick,
+  children,
+  className,
+}) => {
   return (
-    <button className={styles.button} onClick={onClick}>
+    <button className={cl(styles.button, className)} onClick={onClick}>
       <span className={styles.buttonText}>{children}</span>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 35.83 59"
-        className={styles.buttonBorderLeft}
-      >
-        <path
-          className={styles.buttonLine}
-          d="M36,56.75h-2.19s-8-4.5-8-4.5H5.04V7.75h30.95"
-        />
-        <path
-          className={styles.buttonArrow}
-          d="M17.92,11.53l-9.5,9V11.53h9.5Z"
-        />
-      </svg>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 39.92 59"
-        className={styles.buttonBorderRight}
-      >
-        <path
-          className={styles.buttonLine}
-          d="M.42,7.76h1.63L10.55,2.26h24.71V56.76H.13"
-        />
-        <path className={styles.buttonArrow} d="M22.42,53.76l9.5-9v9h-9.5Z" />
-      </svg>
+      <span className={styles.buttonAngleLeft} />
+      <span className={styles.buttonAngleRight} />
     </button>
   );
 };
