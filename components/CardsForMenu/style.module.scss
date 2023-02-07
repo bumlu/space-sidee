@@ -1,0 +1,13 @@
+.cardsForMenu {
+  position: relative;
+  padding-left: 2.5rem;
+
+  &Image {
+    display: block;
+  }
+  &Button {
+    left: 0;
+    top: 10%;
+    position: absolute;
+  }
+}

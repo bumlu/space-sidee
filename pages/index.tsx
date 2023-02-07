@@ -6,6 +6,7 @@ import { Button } from "../components/Button";
 import { Navigation } from "../components/Navigation";
 import { Title } from "../components/Title";
 import { Diamond } from "../components/Diamond";
+import { Menu } from "../components/Menu";
 
 export default function Home() {
   return (
@@ -31,9 +32,10 @@ export default function Home() {
       </section>
       <section className={cl(styles.section, styles.sectionEarth)}>
         <Title size="Large">Factions</Title>
+        <Menu />
       </section>
       <section className={cl(styles.section, styles.sectionRoadMap)}>
-        <Diamond></Diamond>
+        <Diamond />
       </section>
     </div>
   );
